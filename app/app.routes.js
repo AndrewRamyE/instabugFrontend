@@ -1,10 +1,6 @@
 angular.module('appModule')
-  .config(($locationProvider) => {
-    $locationProvider.html5Mode({
-      enabled: true,
-    });
-  })
-  .config(($stateProvider) => {
+  .config(($stateProvider, $urlRouterProvider) => {
+    $urlRouterProvider.otherwise('/404');
     $stateProvider
       .state({
         name: 'app',
@@ -17,5 +13,14 @@ angular.module('appModule')
         name: 'team-performance',
         url: '/team-performance',
         template: '<v-performance-page></v-performance-page>',
+      }).state({
+        name: '404',
+        url: '/404',
+        template: '<v-page404></v-page404>',
       });
+  })
+  .config(($locationProvider) => {
+    $locationProvider.html5Mode({
+      enabled: true,
+    });
   });
