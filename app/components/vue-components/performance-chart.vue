@@ -137,6 +137,30 @@ export default {
             },
           },
         ],
+         visualMap: {
+        top: 50,
+        right: 10,
+        pieces: [
+          {
+            gt: 0,
+            lte: 50,
+            color: '#ee5f48'
+          },
+          {
+            gt: 50,
+            lte: 80,
+            color: '#f8d530'
+          },
+          {
+            gt: 80,
+            lte: 100,
+            color: '#178b48'
+          },
+        ],
+        outOfRange: {
+          color: '#104526'
+        }
+      },
       };
     },
 
