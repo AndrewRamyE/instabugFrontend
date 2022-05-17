@@ -42,6 +42,7 @@
   },
   "scripts": {
     "start": "webpack-dev-server --open --progress",
-    "test": "vue-cli-service test:unit"
+    "test": "vue-cli-service test:unit",
+    "build": "ng build"
   }
 }
