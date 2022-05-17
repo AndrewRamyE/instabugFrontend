@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import 'ngVue';
 import 'ngVue/build/plugins.js';
+import 'regenerator-runtime/runtime';
 import PerformancePageComponent from './pages/performance-page.vue';
 import FilterInput from './components/vue-components/filterInput.vue';
 import PerformanceChartComponent from './components/vue-components/performance-chart.vue';

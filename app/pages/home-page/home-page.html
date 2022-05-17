@@ -5,9 +5,13 @@
 
   <employees-list employees-list="homePageVm.employees" search-field="searchField"></employees-list>
 
-  <div class="c-dashboard__footer">
-    <button class="c-button">
+  <div class="c-dashboard__footer" ng-show="!lastPage">
+    <button class="c-button" ng-click="loadMore()" ng-show="showBtn">
       Load More
     </button>
+    <button class="c-button" ng-show="!showBtn" disabled>Loading ................... </button>
+  </div>
+  <div class="c-dashboard__footer" ng-show="lastPage">
+    <button class="c-button" disabled>no more pages </button>
   </div>
 </div>
