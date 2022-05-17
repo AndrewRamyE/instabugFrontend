@@ -9,8 +9,8 @@ describe('test Preformance Page rendered', ()=>{
     expect(screen.getByText('Start Date')).toBeInTheDocument();
   });
   it('put start and end date and see tooltip', async ()=>{
-    fireEvent.update(screen.getByLabelText('startDate'),'2022-01-10');
-    fireEvent.update(screen.getByLabelText('endDate'),'2022-01-11');
-    expect( await screen.findByText('10 jan 2022')).toBeInTheDocument();
+    fireEvent.update(screen.getByLabelText('startDate'), '2022-01-10');
+    fireEvent.update(screen.getByLabelText('endDate'), '2022-01-11');
+    expect(await screen.findByText('10 jan 2022')).toBeInTheDocument();
   });
 });
